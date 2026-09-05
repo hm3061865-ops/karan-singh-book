@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Karan Singh Books</title>
+
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #222;
+        }
+
+        header {
+            background-color: #111;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        #home {
+            background-color: #e8f5e9;
+        }
+
+        #books {
+            background-color: white;
+        }
+
+        #about {
+            background-color: #f0f0f0;
+        }
+
+        button {
+            background-color: #111;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .book-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .book-card {
+            background-color: #ffffff;
+            width: 250px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .price {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Karan Singh Books</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#books">Books</a>
+            <a href="#about">About</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section id="home">
+
+            <h2>Welcome to My Book Store</h2>
+
+            <p>
+                Discover interesting books written by Karan Singh.
+            </p>
+
+            <a href="#books">
+                <button>Explore Books</button>
+            </a>
+
+        </section>
+
+
+        <section id="books">
+
+            <h2>My Books</h2>
+
+            <div class="book-container">
+
+
+                <!-- Book 1 -->
+                <div class="book-card">
+
+                    <h3>Simple Pendulum</h3>
+
+                    <p>
+                        Learn about the fascinating world of pendulum motion.
+                    </p>
+
+                    <p class="price">₹199</p>
+
+                    <!-- UPI Payment Button -->
+                    <a href="upi://pay?pa=7023688185@ybl&pn=Karan%20Singh&am=199&cu=INR&tn=Simple%20Pendulum">
+                        <button>Buy Now</button>
+                    </a>
+
+                </div>
+
+
+                <!-- Book 2 -->
+                <div class="book-card">
+
+                    <h3>Two Goats</h3>
+
+                    <p>
+                        An interesting and memorable story.
+                    </p>
+
+                    <p class="price">₹199</p>
+
+                    <button>Buy Now</button>
+
+                </div>
+
+
+                <!-- Book 3 -->
+                <div class="book-card">
+
+                    <h3>Javelin Throw</h3>
+
+                    <p>
+                        Discover the exciting world of javelin throw.
+                    </p>
+
+                    <p class="price">₹249</p>
+
+                    <button>Buy Now</button>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <section id="about">
+
+            <h2>About the Author</h2>
+
+            <p>
+                Karan Singh is the author behind these books.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>© 2026 Karan Singh Books. All rights reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>
