@@ -8,7 +8,6 @@
     <title>Karan Singh Books</title>
 
     <style>
-
         html {
             scroll-behavior: smooth;
         }
@@ -16,15 +15,19 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background: #f4f4f4;
             color: #222;
         }
 
         header {
-            background-color: #111;
+            background: #111;
             color: white;
-            padding: 20px;
+            padding: 25px 15px;
             text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
         }
 
         nav {
@@ -44,55 +47,78 @@
         }
 
         #home {
-            background-color: #e8f5e9;
+            background: #e8f5e9;
         }
 
         #books {
-            background-color: white;
+            background: white;
         }
 
         #about {
-            background-color: #f0f0f0;
-        }
-
-        button {
-            background-color: #111;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        footer {
-            background-color: #111;
-            color: white;
-            text-align: center;
-            padding: 20px;
+            background: #f0f0f0;
         }
 
         .book-container {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
             flex-wrap: wrap;
         }
 
         .book-card {
-            background-color: #ffffff;
+            background: white;
             width: 250px;
             padding: 25px;
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        .book-card h3 {
+            font-size: 22px;
         }
 
         .price {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: bold;
             color: #2e7d32;
         }
 
+        .buy-btn {
+            display: inline-block;
+            background: #111;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 7px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .buy-btn:hover {
+            background: #333;
+        }
+
+        .upi-box {
+            margin: 35px auto 0;
+            max-width: 450px;
+            background: #fafafa;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .upi-id {
+            font-weight: bold;
+            font-size: 18px;
+            word-break: break-all;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
     </style>
 
 </head>
@@ -114,6 +140,8 @@
 
     <main>
 
+        <!-- HOME -->
+
         <section id="home">
 
             <h2>Welcome to My Book Store</h2>
@@ -122,12 +150,14 @@
                 Discover interesting books written by Karan Singh.
             </p>
 
-            <a href="#books">
-                <button>Explore Books</button>
+            <a href="#books" class="buy-btn">
+                Explore Books
             </a>
 
         </section>
 
+
+        <!-- BOOKS -->
 
         <section id="books">
 
@@ -136,7 +166,8 @@
             <div class="book-container">
 
 
-                <!-- Book 1 -->
+                <!-- BOOK 1 -->
+
                 <div class="book-card">
 
                     <h3>Simple Pendulum</h3>
@@ -145,17 +176,21 @@
                         Learn about the fascinating world of pendulum motion.
                     </p>
 
-                    <p class="price">₹199</p>
+                    <p class="price">
+                        ₹199
+                    </p>
 
-                    <!-- UPI Payment Button -->
-                    <a href="upi://pay?pa=7023688185@ybl&pn=Karan%20Singh&am=199&cu=INR&tn=Simple%20Pendulum">
-                        <button>Buy Now</button>
+                    <a
+                        class="buy-btn"
+                        href="upi://pay?pa=7023688185@ybl&pn=Karan%20Singh&am=199&cu=INR&tn=Simple%20Pendulum">
+                        Buy Now — ₹199
                     </a>
 
                 </div>
 
 
-                <!-- Book 2 -->
+                <!-- BOOK 2 -->
+
                 <div class="book-card">
 
                     <h3>Two Goats</h3>
@@ -164,14 +199,21 @@
                         An interesting and memorable story.
                     </p>
 
-                    <p class="price">₹199</p>
+                    <p class="price">
+                        ₹199
+                    </p>
 
-                    <button>Buy Now</button>
+                    <a
+                        class="buy-btn"
+                        href="upi://pay?pa=7023688185@ybl&pn=Karan%20Singh&am=199&cu=INR&tn=Two%20Goats">
+                        Buy Now — ₹199
+                    </a>
 
                 </div>
 
 
-                <!-- Book 3 -->
+                <!-- BOOK 3 -->
+
                 <div class="book-card">
 
                     <h3>Javelin Throw</h3>
@@ -180,17 +222,46 @@
                         Discover the exciting world of javelin throw.
                     </p>
 
-                    <p class="price">₹249</p>
+                    <p class="price">
+                        ₹249
+                    </p>
 
-                    <button>Buy Now</button>
+                    <a
+                        class="buy-btn"
+                        href="upi://pay?pa=7023688185@ybl&pn=Karan%20Singh&am=249&cu=INR&tn=Javelin%20Throw">
+                        Buy Now — ₹249
+                    </a>
 
                 </div>
 
+            </div>
+
+
+            <!-- UPI INFORMATION -->
+
+            <div class="upi-box">
+
+                <h3>UPI Payment</h3>
+
+                <p>
+                    If the Buy Now button does not open your UPI app,
+                    you can pay using this UPI ID:
+                </p>
+
+                <p class="upi-id">
+                    7023688185@ybl
+                </p>
+
+                <p>
+                    Please enter the correct book price while making the payment.
+                </p>
 
             </div>
 
         </section>
 
+
+        <!-- ABOUT -->
 
         <section id="about">
 
@@ -207,7 +278,9 @@
 
     <footer>
 
-        <p>© 2026 Karan Singh Books. All rights reserved.</p>
+        <p>
+            © 2026 Karan Singh Books. All rights reserved.
+        </p>
 
     </footer>
 
